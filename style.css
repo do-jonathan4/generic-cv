@@ -5,6 +5,9 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+body div {
+    padding: 4rem;
+}
 nav {
     display: flex;
     justify-content: center;
@@ -35,4 +38,8 @@ nav li a:hover {
 }
 nav ul .current {
     border-bottom: 5px solid cornflowerblue;
+}
+div p {
+    font-size: larger;
+    text-align: center;
 }
