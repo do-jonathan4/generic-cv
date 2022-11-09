@@ -30,7 +30,6 @@ sub.addEventListener('click', (e) =>  {
 })
 copy.addEventListener('click', () => {
     const cv = document.querySelector('#cv')
-    cv.select()
-    navigator.clipboard.writeText(cv.value);
-    alert('copy')
+    navigator.clipboard.writeText(cv.textContent);
+    alert('Text copied successfully')
 })
