@@ -7,8 +7,14 @@ const other_fill = document.querySelectorAll('.other')
 
 const sub = document.querySelector('#sub')
 const copy = document.querySelector('#copy')
+const btn = document.querySelector('#btn')
 
 const prompt = () => alert('Please make sure everything if filled out')
+
+btn.addEventListener('click', (e) =>  {
+    e.preventDefault()
+    console.log(e.target.parentNode.firstElementChild)
+})
 
 sub.addEventListener('click', (e) =>  {
     if (position.value === '') {
