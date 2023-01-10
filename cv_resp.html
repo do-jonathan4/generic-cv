@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Respiratory CV</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
 <body>
     <nav>
@@ -18,10 +19,21 @@
     <div class="container">
         <h1>Respiratory</h1>
         <form action="">
-            <input type="text" id="position" placeholder="position">
-            <input type="text" id="company" placeholder="company">
-            <input type="text" id="other" placeholder="other options">
-            <button id="btn">TEST</button>
+            <div>
+                <input type="text" id="position" placeholder="position">
+                <span class="btn-paste">
+                    <i class="fa fa-paste"></i>
+                </span>
+            </div>
+            <div>
+                <input type="text" id="company" placeholder="company">
+                <span class="btn-paste">
+                    <i class="fa fa-paste"></i>
+                </span>
+            </div>
+            <div>
+                <input type="text" id="other" placeholder="other options">
+            </div>
         </form>
         <div class="btn-container">
             <button id="sub">Submit</button>

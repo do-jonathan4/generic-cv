@@ -7,13 +7,18 @@ const other_fill = document.querySelectorAll('.other')
 
 const sub = document.querySelector('#sub')
 const copy = document.querySelector('#copy')
-const btn = document.querySelector('#btn')
+const span = document.querySelectorAll('span')
 
 const prompt = () => alert('Please make sure everything if filled out')
 
-btn.addEventListener('click', (e) =>  {
-    e.preventDefault()
-    console.log(e.target.parentNode.firstElementChild)
+span.forEach(x => {
+    x.addEventListener('click', (e) =>  {
+        e.preventDefault()
+        let val = e.target.parentElement.parentElement.firstElementChild
+        navigator.clipboard
+        .readText()
+        .then((clipText => val.value = clipText))
+    })
 })
 
 sub.addEventListener('click', (e) =>  {
