@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Developer CV</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
 <body>
     <nav>
@@ -18,9 +19,24 @@
     <div class="container">
         <h1>Dev</h1>
         <form action="">
-            <input type="text" id="position" placeholder="position">
-            <input type="text" id="company" placeholder="company">
-            <input type="text" id="languages" placeholder="languages">
+            <div>
+                <input type="text" id="position" placeholder="position">
+                <span class="btn-paste">
+                    <i class="fa fa-paste"></i>
+                </span>
+            </div>
+            <div>
+                <input type="text" id="company" placeholder="company">
+                <span class="btn-paste">
+                    <i class="fa fa-paste"></i>
+                </span>
+            </div>
+            <div>
+                <input type="text" id="other" placeholder="languages">
+                <span class="btn-paste">
+                    <i class="fa fa-paste"></i>
+                </span>
+            </div>
         </form>
         <div class="btn-container">
             <button id="sub">Submit</button>
@@ -33,11 +49,11 @@
             <p class="break"></p>
             <p>My experience as a respiratory therapist has made me meticulous and process-driven. While I'm aware I won't exactly be saving lives as a <span class="position">position</span>, I am confident my interest in technology and my obsession with detail and ability to communicate will go a long way towards being a productive member of the team.</p>
             <p class="break"></p>
-            <p>I started off with freeCodeCamp, taking introductory HTML, CSS and JavaScript courses. I realized that I wanted to do this professionally and so I enrolled myself at LearningFuze: Web Development program, where I spent about 40 hours a week for a year programming. I continued to learn and practice other languages such as <span class="languages">languages</span> in addition to building projects under the guidance of senior developers.</p>
+            <p>I started off with freeCodeCamp, taking introductory HTML, CSS and JavaScript courses. I realized that I wanted to do this professionally and so I enrolled myself at LearningFuze: Web Development program, where I spent about 40 hours a week for a year programming. I continued to learn and practice other languages such as <span class="other">languages</span> in addition to building projects under the guidance of senior developers.</p>
             <p class="break"></p>
             <p>I am confident that my previous role in healthcare will translate well to the <span class="position">position</span> role where I can help develop solutions and continue learning about software engineering. It would be an honor to be a part of your team, and I look forward to discussing how I can contribute to <span class="company">company</span>. Thank you in advance for your time and consideration.</p>
         </div>
     </div>
-    <script src="cv_dev.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
