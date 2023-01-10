@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Respiratory CV</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
 <body>
     <nav>
@@ -18,9 +19,24 @@
     <div class="container">
         <h1>Respiratory</h1>
         <form action="">
-            <input type="text" id="position" placeholder="position">
-            <input type="text" id="company" placeholder="company">
-            <input type="text" id="other" placeholder="other options">
+            <div>
+                <input type="text" id="position" placeholder="position">
+                <span class="btn-paste">
+                    <i class="fa fa-paste"></i>
+                </span>
+            </div>
+            <div>
+                <input type="text" id="company" placeholder="company">
+                <span class="btn-paste">
+                    <i class="fa fa-paste"></i>
+                </span>
+            </div>
+            <div>
+                <input type="text" id="other" placeholder="other options">
+                <span class="btn-paste">
+                    <i class="fa fa-paste"></i>
+                </span>
+            </div>
         </form>
         <div class="btn-container">
             <button id="sub">Submit</button>
@@ -36,6 +52,6 @@
             <p>My education includes an Associate's Degree in Respiratory Therapy and I possess a current license to practice. I believe I am a great fit for this role and would appreciate the opportunity to discuss how I can contribute to <span class="company">company</span>. Although I am confident that my past experience will translate well into this role, I am willing to change and adapt to whatever is demanded of me. Thank you in advance for your time and consideration.</p>
         </div>
     </div>
-    <script src="cv_resp.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
