@@ -7,7 +7,7 @@ const other_fill = document.querySelectorAll('.other')
 
 const sub = document.querySelector('#sub')
 const copy = document.querySelector('#copy')
-const span = document.querySelectorAll('span')
+const span = document.querySelectorAll('formInput')
 
 const prompt = () => alert('Please make sure everything if filled out')
 
