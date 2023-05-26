@@ -2,11 +2,8 @@ const navLinks = document.querySelectorAll('.nav a')
 const formInput = document.querySelectorAll('#formInput button')
 const copy = document.querySelector('#copy')
 const submit = document.querySelector('#submit')
-
-//copy function
 const respPar = document.querySelector('#resp')
 const devPar = document.querySelector('#dev')
-
 const [position, company, other] = document.querySelectorAll('input')
 let activeTab = ''
 
@@ -22,29 +19,26 @@ navLinks.forEach(x => {
         if (x.textContent === 'Home') {
             section.classList.add('d-none')
             h3.classList.remove('d-none')
-        }
-        // make shorter
-        if (x.textContent === 'Developer') {
+        } else {
             section.classList.remove('d-none')
             h3.classList.add('d-none')
             h1.textContent = x.textContent
-            devPar.classList.remove('d-none')
-            respPar.classList.add('d-none')
-        }
-        if (x.textContent === 'Respiratory') {
-            section.classList.remove('d-none')
-            h3.classList.add('d-none')
-            h1.textContent = x.textContent
-            devPar.classList.add('d-none')
-            respPar.classList.remove('d-none')
+            position.value = ''
+            company.value = ''
+            other.value = ''
+            
+            if (x.textContent === 'Developer') {
+                devPar.classList.remove('d-none')
+                respPar.classList.add('d-none')
+                other.placeholder = 'Languages'
+            }
+            if (x.textContent === 'Respiratory') {
+                devPar.classList.add('d-none')
+                respPar.classList.remove('d-none')
+                other.placeholder = 'Other'
+            }
         }
     })
-})
-
-copy.addEventListener('click', () => {
-    const cv = document.querySelector('#cv')
-    // navigator.clipboard.writeText(cv.innerText);
-    alert('Text copied successfully')
 })
 
 formInput.forEach(x => {
@@ -56,10 +50,20 @@ formInput.forEach(x => {
     })
 })
 
+copy.addEventListener('click', () => {
+    if (activeTab === 'Developer') {
+        navigator.clipboard.writeText(devPar.innerText)
+    }
+    if (activeTab === 'Respiratory') {
+        navigator.clipboard.writeText(respPar.innerText)
+    }
+    alert('Text copied successfully')
+})
+
 submit.addEventListener('click', (e) =>  {
-    const position_resp = document.querySelectorAll('#dev .position')
-    const company_resp = document.querySelectorAll('#dev .company')
-    const other_resp = document.querySelectorAll('#dev .other')
+    const position_resp = document.querySelectorAll('#resp .position')
+    const company_resp = document.querySelectorAll('#resp .company')
+    const other_resp = document.querySelectorAll('#resp .other')
     const position_dev = document.querySelectorAll('#dev .position')
     const company_dev = document.querySelectorAll('#dev .company')
     const other_dev = document.querySelectorAll('#dev .other')
