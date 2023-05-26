@@ -5,20 +5,83 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generic CV</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="/" class="current">Home</a></li>
-            <li><a href="cv_dev.html">Developer</a></li>
-            <li><a href="cv_resp.html">Respiratory</a></li>
-        </ul>
-    </nav>
-    <div class="container">
-        <p class="home">
-            A simple app for spamming out high quality cover letters
-        </p>
-    </div>
+<body class="bg-light">
+    <ul class="nav nav-pills nav-fill justify-content-center p-4">
+        <a class="nav-link active" href="#">Home</a>
+        <a class="nav-link" href="#">Developer</a>
+        <a class="nav-link" href="#">Respiratory</a>
+    </ul>
+
+    <h3 class="p-4 mt-2 text-center">
+        A simple app for spamming out high quality cover letters
+    </h3>
+    
+    <section class="d-none">
+        <h1 class="p-4 mt-2 text-center"></h1>
+
+        <div class="container w-75">
+            <div class="row" id="formInput">
+                <div class="col-md input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Position">
+                    <button class="btn btn-outline-secondary">
+                        <i class="fa-solid fa-paste"></i>
+                    </button>
+                </div>
+                <div class="col-md input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Company">
+                    <button class="btn btn-outline-secondary">
+                        <i class="fa-solid fa-paste"></i>
+                    </button>
+                </div>
+                <div class="col-md input-group mb-3">
+                    <input list="options" class="form-control" placeholder="Other">
+                    <datalist id="options">
+                        <option value="new opportunities"></option>
+                        <option value="taking the next steps in my career"></option>
+                    </datalist>
+                    <button class="btn btn-outline-secondary">
+                        <i class="fa-solid fa-paste"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto">
+            <div class="d-flex justify-content-center">
+                <button id="submit" class="btn btn-outline-secondary mx-2">
+                    Submit
+                </button>
+                <button id="copy" class="btn btn-outline-secondary mx-2">
+                    Copy
+                </button>
+            </div>
+        </div>
+    
+        <div contenteditable="true" id="dev" class="p-4 mx-auto mt-4 w-75 fs-5 border border-primary border-2 rounded">
+            <p>Dear Hiring Manager,</p>
+            <p></p>
+            <p>I would like to express my interest for the <span class="text-danger position">position</span> position at <span class="text-danger company">company</span>. I have spent the last few years of my career practicing medicine in a variety of settings, which has given me hands-on experience for working with patients and other health professionals. I am confident my past experience will be useful for this position.</p>
+            <p class="break"></p>
+            <p>My experience as a respiratory therapist has made me meticulous and process-driven. While I'm aware I won't exactly be saving lives as a <span class="text-danger position">position</span>, I am confident my interest in technology and my obsession with detail and ability to communicate will go a long way towards being a productive member of the team.</p>
+            <p class="break"></p>
+            <p>I started off with freeCodeCamp, taking introductory HTML, CSS and JavaScript courses. I realized that I wanted to do this professionally and so I enrolled myself at LearningFuze: Web Development program, where I spent about 40 hours a week for a year programming. I continued to learn and practice other languages such as <span class="text-danger other">languages</span> in addition to building projects under the guidance of senior developers.</p>
+            <p class="break"></p>
+            <p>I am confident that my previous role in healthcare will translate well to the <span class="text-danger position">position</span> role where I can help develop solutions and continue learning about software engineering. It would be an honor to be a part of your team, and I look forward to discussing how I can contribute to <span class="text-danger company">company</span>. Thank you in advance for your time and consideration.</p>
+        </div>
+        <div contenteditable="true" id="resp" class="p-4 mx-auto mt-4 w-75 fs-5 border border-primary border-2 rounded">
+            <p>I would like to express my interest for the <span class="text-danger position">position</span> position at <span class="text-danger company">company</span>. I have spent the last few years of my career practicing medicine in subacute, home health and sleep lab setting, which has given me hands-on experience for working with patients. I have refined my skills in diagnosing and treating pulmonary diseases.</p>
+            <p class="break"></p>
+            <p>My experience as a respiratory therapist has made me very detail-oriented and process-driven. I am confident my obsession with detail and ability to communicate at the bedside and with coworkers will go a long way towards being a productive member of the team.</p>
+            <p class="break"></p>
+            <p>While I enjoy my time as a respiratory therapist, the combination of career progression and the COVID epidemic gave me a lot of time to reflect. This prompted me to consider <span class="text-danger other">other career options</span>.</p>
+            <p class="break"></p>
+            <p>My education includes an Associate's Degree in Respiratory Therapy and I possess a current license to practice. I believe I am a great fit for this role and would appreciate the opportunity to discuss how I can contribute to <span class="text-danger company">company</span>. Although I am confident that my past experience will translate well into this role, I am willing to change and adapt to whatever is demanded of me. Thank you in advance for your time and consideration.</p>
+        </div>
+    </section>
+
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>
 </html>
